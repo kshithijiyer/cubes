@@ -7,7 +7,7 @@
 					<h2><a href='<? the_permalink()?>'><?php the_title(); ?></a></h2>
 					<?php the_content(); ?>
 					<div class="text-right">
-						Written by:<a href="<?php get_the_author_link(); ?> "><strong><?php echo get_the_author(); ?>,</strong></a><br />
+						Written by:<? the_author_posts_link()?><br />
 						<strong><?php echo get_the_date(); ?></strong>
 					</div>
 				</div>
