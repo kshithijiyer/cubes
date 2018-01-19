@@ -12,7 +12,7 @@
 					</div>
 				</div>
 			</div>
-	</div>
-<?php endwhile; ?>
+		</div>
+	<?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
