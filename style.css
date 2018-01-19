@@ -7,17 +7,23 @@ Description: This is a small, simple and sweet wordpress theme which can be used
 Version: 1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: boxes, three-columns, simple, clean, small, sticky notes, blog, sweet simple sexy, simple blog, squares, cubes, sticky notes type blog, lite.
+Tags: boxes, three-columns, simple, clean, small, sticky notes, blog, sweet simple sexy, simple blog, squares, cubes, sticky notes type blog, lite, sticky wall.
 Text Domain: cubes
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
  a{
 	color: #000000;
+	font-weight: bold;
+ }
+ a:hover{
+	background-color: #00ffd4;
+	text-decoration: none;
  }
  body {
 	font: 20px Montserrat, sans-serif;
 	line-height: 1.8;
 	background-color: #d9d9d9;
+	margin: 0.25%;
  }
  

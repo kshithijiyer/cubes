@@ -10,7 +10,7 @@
 			if($counter%3==0){
 				echo "<div class='row row-grid'>";
 			}?>
-					<div class='col-sm-4' style='background-color:<? echo $colors[$color_index]; ?>; height: 100%;'>
+					<div class='col-sm-4' style='background-color:<? echo $colors[$color_index]; ?>; height: 55%;'>
 						<h2><a href='<? the_permalink()?>'><?the_title();?></a></h2>
 						<? the_excerpt();?>
 					</div>
