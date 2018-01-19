@@ -1,0 +1,23 @@
+/*
+Theme Name: Cubes 
+Theme URI: https://github.com/kshithijiyer/cubes
+Author: Kshithij Iyer
+Author URI: www.linkedin.com/in/kshithij-iyer
+Description: This is a small, simple and sweet wordpress theme which can be used to create blogs with posts displayed in the form of small blocks. The design of this theme is inspired by a rubik's cube. This is a single page and lite WordPress theme.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: boxes, three-columns, simple, clean, small, sticky notes, blog, sweet simple sexy, simple blog, squares, cubes, sticky notes type blog, lite.
+Text Domain: cubes
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+ a{
+	color: #000000;
+ }
+ body {
+	font: 20px Montserrat, sans-serif;
+	line-height: 1.8;
+	background-color: #d9d9d9;
+ }
+ 
