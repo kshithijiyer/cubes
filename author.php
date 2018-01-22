@@ -8,7 +8,7 @@
 		$color_index=array_rand($colors);
     ?>
 	<div class='row row-grid'>
-		<div class='col-sm-7' style='background-color:<? echo $colors[$color_index]; ?>; height: 100%;'>
+		<div class='col-sm-7' style='background-color:<?php echo $colors[$color_index]; ?>; height: 100%;'>
 		<h2>About author:</h2>
 		<dl>
 			<dt>Name</dt>
@@ -23,7 +23,7 @@
 			$color_index=array_rand($colors);
 		?>
 		</div>
-		<div class='col-sm-5 col' style='background-color:<? echo $colors[$color_index]; ?>; height: 100%;'>
+		<div class='col-sm-5 col' style='background-color:<?php echo $colors[$color_index]; ?>; height: 100%;'>
 			<h2>Posts by <?php echo $curauth->nickname; ?>:</h2>
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>,
