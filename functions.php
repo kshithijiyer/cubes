@@ -24,19 +24,11 @@
 	return $locale;
 	}
 	add_theme_support('automatic-feed-links');
-	add_action( 'after_setup_theme', 'my_theme_setup' );	
-	function my_theme_setup(){
-		load_theme_textdomain( 'cubes', get_template_directory() . '/languages' );
-	}
-	$comments_args = array(
-        // change the title of send button 
-        'label_submit'=>'Send',
-        // change the title of the reply section
-        'title_reply'=>'Write a Reply or Comment',
-        // remove "Text or HTML to be displayed after the set of comment fields"
-        'comment_notes_after' => '',
-        // redefine your own textarea (the comment body)
-        'comment_field' => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><br /><textarea id="comment" name="comment" aria-required="true"></textarea></p>',
+	$args = array(
+		'width'         => 980,
+		'height'        => 60,
+		'default-image' => get_template_directory_uri() . '/images/header.jpg',
 	);
-	comment_form($comments_args);
+	add_theme_support( 'custom-header', $args );
+	add_theme_support( 'post-thumbnails' );
 ?>

@@ -16,7 +16,6 @@
 			<div>
 				<p><br />
 					<?php bloginfo('description'); ?><br />
-					<?php echo get_the_tag_list( '', ', ','.' ); ?>
 				</p><br />
 			</div>
 		</header>

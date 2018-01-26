@@ -5,8 +5,8 @@
 	if(have_posts()){
 		$counter=1;
 		$colors=array("#ffff66","#ff6666","#6666ff","#66ff66");
-		$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
-		while($wpb_all_query->have_posts()):$wpb_all_query->the_post();
+		#$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
+		while(have_posts()):the_post();
 			$color_index=array_rand($colors);
 			if($counter==1){
 				echo "<div class='row row-grid'> \n";
@@ -22,10 +22,12 @@
 			}else{
 				$counter=$counter+1;
 			}
-		endwhile;?>
+		endwhile;
+		?>
 		</div>
 	<?php }else{
 		_e( 'Error no posts found!', 'Cubes' );
 	}
+		echo paginate_links();
 	get_footer();
 ?>

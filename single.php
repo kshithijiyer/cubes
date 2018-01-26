@@ -8,11 +8,12 @@
 					<?php the_content(); ?>
 					<div class="text-right">
 						Written by:<?php the_author_posts_link()?><br />
-						<strong><?php echo get_the_date(); ?></strong>
+						<strong><?php echo get_the_date(); ?></strong><br />
+						Category: <?php the_category(', ') ?><br />
+						<?php echo get_the_tag_list( '#', ', #','' ); ?>
 					</div>
 				</div>
 			</div>
-		</div>
 	<?php endwhile; ?>
 <?php endif; ?>
 <?php get_footer(); ?>
