@@ -28,7 +28,7 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>,
 					<?php endwhile; else: ?>
-					<p><?php _e('No posts by this author.'); ?></p>
+					<p><?php _e('No posts by this author.', 'cubes'); ?></p>
 				<?php endif; ?>
 		</div>
 	</div>

@@ -39,5 +39,4 @@
 	}
 	add_action( 'comment_form_before', 'newborn_enqueue_comments_reply' );
 	if ( ! isset( $content_width ) ) $content_width = 900;
-
 ?>

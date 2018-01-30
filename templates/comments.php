@@ -17,4 +17,4 @@ if ( $comments ) {
     echo 'No comments found.';
 }
 ?>
-<?php comment_form(); ?>
+<?php comment_form(array('comment_notes_after' => '')); ?>

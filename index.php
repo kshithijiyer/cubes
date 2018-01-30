@@ -26,7 +26,7 @@
 		?>
 		</div>
 	<?php }else{
-		_e( 'Error no posts found!', 'Cubes' );
+		_e( 'Error no posts found!', 'cubes' );
 	}
 		echo paginate_links();
 	get_footer();

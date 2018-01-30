@@ -12,8 +12,9 @@
 						Category: <?php the_category(', ') ?><br />
 						<?php echo get_the_tag_list( '#', ', #','' ); ?>
 					</div>
+					 <?php wp_list_comments( $args ); ?>
 					<?php paginate_comments_links(); ?>
-					<?php comments_template( 'comments.php' ); ?>
+					<?php comments_template( '/templates/comments.php', true );     ?>
 				</div>
 			</div>
 	<?php endwhile; ?>
