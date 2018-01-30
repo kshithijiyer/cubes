@@ -17,6 +17,7 @@
 				<p><br />
 					<?php bloginfo('description'); ?><br />
 				</p><br />
-			</div>
+			</div
+			<?php wp_link_pages(); ?>>
 		</header>
 		

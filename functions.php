@@ -31,4 +31,13 @@
 	);
 	add_theme_support( 'custom-header', $args );
 	add_theme_support( 'post-thumbnails' );
+	add_theme_support( "custom-background", $args );
+	function newborn_enqueue_comments_reply() {
+		if( get_option( 'thread_comments' ) ) {
+			wp_enqueue_script( 'comment-reply' );
+		}
+	}
+	add_action( 'comment_form_before', 'newborn_enqueue_comments_reply' );
+	if ( ! isset( $content_width ) ) $content_width = 900;
+
 ?>
