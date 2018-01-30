@@ -1,3 +1,4 @@
+<h3>Comments on the post:</h3>
 <?php
 //Get only the approved comments 
 $args = array(
@@ -18,3 +19,4 @@ if ( $comments ) {
 }
 ?>
 <?php comment_form(array('comment_notes_after' => '')); ?>
+<?php paginate_comments_links(); ?>

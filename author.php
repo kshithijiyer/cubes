@@ -4,7 +4,7 @@
 <!-- This sets the $curauth variable -->
     <?php
 		$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-		$colors=array("#ffff66","#ff6666","#6666ff","#66ff66");
+		$colors=array('#ffff66','#ff6666','#6666ff','#66ff66');
 		$color_index=array_rand($colors);
     ?>
 	<div class='row row-grid'>
@@ -19,7 +19,7 @@
 			<dd><?php echo $curauth->user_description; ?></dd>
 		</dl>
 		<?php
-			$colors=array("#ffff66","#ff6666","#6666ff","#66ff66");
+			$colors=array('#ffff66','#ff6666','#6666ff','#66ff66');
 			$color_index=array_rand($colors);
 		?>
 		</div>

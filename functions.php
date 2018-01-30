@@ -31,7 +31,7 @@
 	);
 	add_theme_support( 'custom-header', $args );
 	add_theme_support( 'post-thumbnails' );
-	add_theme_support( "custom-background", $args );
+	add_theme_support( 'custom-background', $args );
 	function newborn_enqueue_comments_reply() {
 		if( get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
@@ -39,4 +39,10 @@
 	}
 	add_action( 'comment_form_before', 'newborn_enqueue_comments_reply' );
 	if ( ! isset( $content_width ) ) $content_width = 900;
+	the_post_thumbnail( 'thumbnail' );
+	function wpdocs_theme_add_editor_styles() {
+    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
+    add_editor_style( $font_url );
+}
+add_action( 'after_setup_theme', 'wpdocs_theme_add_editor_styles' );
 ?>

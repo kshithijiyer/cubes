@@ -18,12 +18,6 @@ Text Domain: cubes
 	background-color: #00ffd4;
 	text-decoration: none;
  }
- body {
-	font: 20px Montserrat, sans-serif;
-	line-height: 1.8;
-	background-color: #d9d9d9;
-	margin: 0.25%;
- }
  .alignnone {
     margin: 5px 20px 20px 0;
 }
@@ -63,7 +57,58 @@ a img.aligncenter {
     margin-left: auto;
     margin-right: auto;
 }
+ body {
+	font: 20px Montserrat, sans-serif;
+	line-height: 1.8;
+	background-color: #d9d9d9;
+	margin: 0.25%;
+ }
+ .bypostauthor{
+}
+[class*="col-"] {
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+}
+.gallery-caption{
+} 
+.row {
+    display: table;
+}
 
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #eee;
+	clip: auto !important;
+	clip-path: none;
+	color: #444;
+	display: block;
+	font-size: 1em;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+.sticky {
+}
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
@@ -100,49 +145,3 @@ a img.aligncenter {
     padding: 0 4px 5px;
 }
 
-/* Text meant only for screen readers. */
-.screen-reader-text {
-	border: 0;
-	clip: rect(1px, 1px, 1px, 1px);
-	clip-path: inset(50%);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute !important;
-	width: 1px;
-	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
-}
-
-.screen-reader-text:focus {
-	background-color: #eee;
-	clip: auto !important;
-	clip-path: none;
-	color: #444;
-	display: block;
-	font-size: 1em;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000;
-	/* Above WP toolbar. */
-}
-.sticky {
-}
-.bypostauthor{
-}
-.gallery-caption{
-} 
-.row {
-    display: table;
-}
-
-[class*="col-"] {
-    float: none;
-    display: table-cell;
-    vertical-align: top;
-}
