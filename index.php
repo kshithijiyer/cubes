@@ -1,34 +1,74 @@
-<?php get_header();?>
-	<!--Site body -->
+<?php 
+
+/**
+ *  Index Page for cubes.
+ * 
+ * @Package: cubes
+ * @Author: Kshithij Iyer
+ * @Version: 1.0
+ */
+ 
+get_header();?>
+	
+	<!-- Post Grid-->
 	<div class="container-fluid text-center">
-<?php
-	if(have_posts()){
-		$counter=1;
-		$colors=array("#ffff66","#ff6666","#6666ff","#66ff66");
-		#$wpb_all_query = new WP_Query(array('post_type'=>'post', 'post_status'=>'publish', 'posts_per_page'=>-1));
-		while(have_posts()):the_post();
-			$color_index=array_rand($colors);
-			if($counter==1){
-				echo "<div class='row row-grid'> \n";
-			}?>
-					<div class='col-sm-4' style='background-color:<?php echo $colors[$color_index];?>;'>
-						<h2><a href='<?php the_permalink()?>'><?php the_title();?></a></h2>
-						<?php the_excerpt();?>
-					</div>
-			<?php 
-			if($counter==3){
-				echo "</div>\n";
+		
+		<?php
+		
+			#Checking if there are posts to be displayed.
+			if(have_posts()){
+				
+				#Initializing counter and array of colors for backgroud.
 				$counter=1;
+				$colors=array("#ffff66","#ff6666","#6666ff","#66ff66");
+				
+				#Iterating through the posts and displaying them.
+				while(have_posts()):the_post();
+					
+					#Selecting a random background color from the array for the post.
+					$color_index=array_rand($colors);
+					
+					#New row logic
+					if($counter==1){
+						
+						echo "<div class='row row-grid'> \n";
+					
+					}?>
+							<!-- Post -->
+							<div class='col-sm-4' style='background-color:<?php echo $colors[$color_index];?>;'>
+								
+								<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+									
+									<h2><a href='<?php the_permalink()?>'><?php the_title();?></a></h2><?php the_excerpt();?>
+								
+								</div><!-- post-id -->
+								
+							</div><!-- .col-sm-4 -->
+					<?php 
+						
+						if($counter==3){
+							
+							echo "</div><!-- .row --> \n";
+							$counter=1;
+						
+						}else{
+							
+							$counter=$counter+1;
+						
+						}
+				endwhile;?>
+	</div><!-- .container-fluid text-cente -->
+		<?php 	
+			
+			#If there are no posts then display the error message.
+			
 			}else{
-				$counter=$counter+1;
+				
+				_e( 'Error no posts found!', 'cubes' );
+			
 			}
-		endwhile;
-		?>
-		</div>
-	<?php }else{
-		_e( 'Error no posts found!', 'cubes' );
-	}
-		echo paginate_links();
-	get_footer();
-?>
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+	#Pagination for the page.
+	echo paginate_links();
+
+get_footer();?>
