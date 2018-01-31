@@ -2,7 +2,7 @@
 
 /**
  *  Header for all pages in cubes themes.
- * 
+ *
  * @Package: cubes
  * @Author: Kshithij Iyer
  * @Version: 1.0
@@ -15,7 +15,7 @@
 	<head>
 		
 		<!-- Meta tags -->
-		<meta charset="<?php bloginfo('charset');?>">
+		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width-device-width">
 		
 		<!-- Bootstrap related code -->
@@ -33,13 +33,13 @@
 		<header class="container text-center page-header">
 			
 			<!-- Displaying Blog Name -->
-			<h1><a href="<?php echo home_url();?>"><?php bloginfo('name'); ?></a></h1>
+			<h1><a href="<?php echo home_url();?>"><?php bloginfo( 'name' ); ?></a></h1>
 			
 			<!-- Display blog Description-->
 			<div>
 				
 				<p><br />
-					<?php bloginfo('description'); ?><br />
+					<?php bloginfo( 'description' ); ?><br />
 				</p><br />
 				
 			</div> <!-- Description div -->

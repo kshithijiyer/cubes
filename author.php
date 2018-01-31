@@ -1,38 +1,36 @@
-<?php 
+<?php
 
 /**
  *  Author Page for cubes.
- * 
+ *
  * @Package: cubes
  * @Author: Kshithij Iyer
  * @Version: 1.0
  */
- 
+
 get_header();?>
 
 <div id="content" class="container-fluid">
-   
-    <?php
+	
+	<?php
 		#This sets the $curauth variable
-		$curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : get_userdata(intval($author));
-		
+		$curauth = ( isset( $_GET['author_name'] ) ) ? get_user_by( 'slug', $author_name ) : get_userdata( intval( $author ) );
 		#Setting random backgroud color.
-		$colors=array('#ffff66','#ff6666','#6666ff','#66ff66');
-		$color_index=array_rand($colors);
-   
-    ?>
-    
+		$colors = array( '#ffff66',' #ff6666', '#6666ff', '#66ff66' );
+		$color_index = array_rand( $colors );
+	?>
+	
 	<div class='row row-grid'>
 		
 		<!-- Author  information-->
-		<div class='col-sm-7' style='background-color:<?php echo $colors[$color_index]; ?>; height: 100%;'>
+		<div class='col-sm-7' style='background-color:<?php echo $colors[ $color_index ]; ?>; height: 100%;'>
 		
 		<h2>About author:</h2>
 		
 		<dl>
 			<!-- Displaying Author's Name and Nick. -->
 			<dt>Name</dt>
-			<dd><?php the_author_meta('first_name');?> <?php the_author_meta('last_name');?>(aka <?php echo $curauth->nickname; ?>)</dd>
+			<dd><?php the_author_meta( 'first_name' );?> <?php the_author_meta( 'last_name' );?>(aka <?php echo $curauth->nickname; ?>)</dd>
 			
 			<!-- Displaying Author's website. -->
 			<dt>Website</dt>
@@ -43,20 +41,18 @@ get_header();?>
 			<dd><?php echo $curauth->user_description; ?></dd>
 	
 		</dl>
-
-		<?php
 		
+		<?php
 			#Setting random backgroud color.
-			$colors=array('#ffff66','#ff6666','#6666ff','#66ff66');
-			$color_index=array_rand($colors);
-			
+			$colors = array( '#ffff66' , '#ff6666' , '#6666ff' , '#66ff66' );
+			$color_index = array_rand( $colors );
 		?>
 		
 		</div><!-- .col-sm-7 -->
 		
 		<!-- Posts by Author --> 
 		
-		<div class='col-sm-5 col' style='background-color:<?php echo $colors[$color_index]; ?>; height: 100%;'>
+		<div class='col-sm-5 col' style='background-color:<?php echo $colors[ $color_index ]; ?>; height: 100%;'>
 			
 			<!-- Heading -->
 			
@@ -67,9 +63,9 @@ get_header();?>
 						
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>,
 					
-				<?php endwhile; else: ?>
+				<?php endwhile; else : ?>
 					
-					<p><?php _e('No posts by this author.', 'cubes'); ?></p>
+					<p><?php _e( 'No posts by this author.' , 'cubes' ); ?></p>
 				
 				<?php endif; ?>
 		

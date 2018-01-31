@@ -1,31 +1,32 @@
-<?php 
+<?php
 
 /**
  *  Single Page for cubes.
- * 
+ *
  * @Package: cubes
  * @Author: Kshithij Iyer
  * @Version: 1.0
  */
- 
+
 get_header();?>
 
 	<div class="container-fluid">
 		
-		<?php 
-		
+		<?php
+
 		#Checking if there are any posts or not and setting the array with colors.
-		if (have_posts()) : $colors=array('#ffff66','#ff6666','#6666ff','#66ff66');
-		
+		if ( have_posts() ) :
+			$colors = array( '#ffff66' , '#ff6666' , '#6666ff' , '#66ff66' );
+
 			#Iterating through the list of posts and displaying them.
-			while (have_posts()) : the_post(); 
-			
+			while ( have_posts() ) : the_post();
+
 				#Setting the background color.
-				$color_index=array_rand($colors);
+				$color_index = array_rand( $colors );
 		?>
 				<div class='row row-grid'>
 					
-					<div class='col-*-* col align-self-center' style="background-color:<?php echo $colors[$color_index]; ?>;">
+					<div class='col-*-* col align-self-center' style="background-color:<?php echo $colors[ $color_index ]; ?>;">
 						
 						<!-- Post Title. -->
 						<h2><a href='<?php the_permalink()?>'><?php the_title(); ?></a></h2>
@@ -38,7 +39,7 @@ get_header();?>
 						
 							Written by:<?php the_author_posts_link()?><br />
 							<strong><?php echo get_the_date(); ?></strong><br />
-							Category: <?php the_category(', ') ?><br />
+							Category: <?php the_category( ', ' ) ?><br />
 							<?php echo get_the_tag_list( '#', ', #','' ); ?>
 						
 						</div><!-- .text-right -->
