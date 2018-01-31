@@ -74,4 +74,6 @@
 	}
 	add_action( 'after_setup_theme', 'wpdocs_theme_add_editor_styles' );
 	
+	#Adding custom logo
+	add_theme_support( 'custom-logo' );
 ?>
