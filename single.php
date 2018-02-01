@@ -40,7 +40,7 @@ get_header();?>
 							Written by:<?php the_author_posts_link()?><br />
 							<strong><?php echo esc_html( get_the_date() ); ?></strong><br />
 							Category: <?php the_category( ', ' ) ?><br />
-							<?php echo esc_html( get_the_tag_list( '#', ', #','' ) ); ?>
+							<?php echo get_the_tag_list( '#', ', #','' ); ?>
 						
 						</div><!-- .text-right -->
 						
