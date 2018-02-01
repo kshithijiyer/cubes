@@ -5,7 +5,7 @@
  *
  * @Package: cubes
  * @Author: Kshithij Iyer
- * @Version: 1.0
+ * @Version: 1.0.1
  */
 
 ?>
@@ -33,7 +33,7 @@
 		<header class="container text-center page-header">
 			
 			<!-- Displaying Blog Name -->
-			<h1><a href="<?php echo home_url();?>"><?php bloginfo( 'name' ); ?></a></h1>
+			<h1><a href="<?php echo esc_url( home_url() );?>"><?php bloginfo( 'name' ); ?></a></h1>
 			
 			<!-- Display blog Description-->
 			<div>

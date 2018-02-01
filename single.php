@@ -5,7 +5,7 @@
  *
  * @Package: cubes
  * @Author: Kshithij Iyer
- * @Version: 1.0
+ * @Version: 1.0.1
  */
 
 get_header();?>
@@ -26,7 +26,7 @@ get_header();?>
 		?>
 				<div class='row row-grid'>
 					
-					<div class='col-*-* col align-self-center' style="background-color:<?php echo $colors[ $color_index ]; ?>;">
+					<div class='col-*-* col align-self-center' style="background-color:<?php echo esc_attr( $colors[ $color_index ] ); ?>;">
 						
 						<!-- Post Title. -->
 						<h2><a href='<?php the_permalink()?>'><?php the_title(); ?></a></h2>
@@ -38,9 +38,9 @@ get_header();?>
 						<div class="text-right">
 						
 							Written by:<?php the_author_posts_link()?><br />
-							<strong><?php echo get_the_date(); ?></strong><br />
+							<strong><?php echo esc_html( get_the_date() ); ?></strong><br />
 							Category: <?php the_category( ', ' ) ?><br />
-							<?php echo get_the_tag_list( '#', ', #','' ); ?>
+							<?php echo esc_html( get_the_tag_list( '#', ', #','' ) ); ?>
 						
 						</div><!-- .text-right -->
 						

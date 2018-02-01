@@ -23,22 +23,22 @@ get_header();?>
 	<div class='row row-grid'>
 		
 		<!-- Author  information-->
-		<div class='col-sm-7' style='background-color:<?php echo $colors[ $color_index ]; ?>; height: 100%;'>
+		<div class='col-sm-7' style='background-color:<?php echo esc_attr( $colors[ $color_index ] ); ?>; height: 100%;'>
 		
 		<h2>About author:</h2>
 		
 		<dl>
 			<!-- Displaying Author's Name and Nick. -->
 			<dt>Name</dt>
-			<dd><?php the_author_meta( 'first_name' );?> <?php the_author_meta( 'last_name' );?>(aka <?php echo $curauth->nickname; ?>)</dd>
+			<dd><?php the_author_meta( 'first_name' );?> <?php the_author_meta( 'last_name' );?>(aka <?php echo esc_html( $curauth->nickname ); ?>)</dd>
 			
 			<!-- Displaying Author's website. -->
 			<dt>Website</dt>
-			<dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
+			<dd><a href="<?php echo  esc_url( $curauth->user_url ); ?>"><?php echo esc_html( $curauth->user_url ); ?></a></dd>
 			
 			<!-- Dsiplaying Author's Bio. -->
 			<dt>Bio</dt>
-			<dd><?php echo $curauth->user_description; ?></dd>
+			<dd><?php echo esc_html( $curauth->user_description ); ?></dd>
 	
 		</dl>
 		
@@ -52,11 +52,11 @@ get_header();?>
 		
 		<!-- Posts by Author --> 
 		
-		<div class='col-sm-5 col' style='background-color:<?php echo $colors[ $color_index ]; ?>; height: 100%;'>
+		<div class='col-sm-5 col' style='background-color:<?php echo esc_attr( $colors[ $color_index ] ); ?>; height: 100%;'>
 			
 			<!-- Heading -->
 			
-			<h2>Posts by <?php echo $curauth->nickname; ?>:</h2>
+			<h2>Posts by <?php echo esc_html( $curauth->nickname ); ?>:</h2>
 				
 				<!-- Post Names.-->
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -65,7 +65,7 @@ get_header();?>
 					
 				<?php endwhile; else : ?>
 					
-					<p><?php _e( 'No posts by this author.' , 'cubes' ); ?></p>
+					<p><?php esc_html_e( 'No posts by this author.' , 'cubes' ); ?></p>
 				
 				<?php endif; ?>
 		

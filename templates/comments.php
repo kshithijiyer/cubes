@@ -4,7 +4,7 @@
  *
  * @Package: cubes
  * @Author: Kshithij Iyer
- * @Version: 1.0
+ * @Version: 1.0.1
  */
 
 if ( post_password_required() ) {
@@ -19,8 +19,7 @@ if ( post_password_required() ) {
 		<h2 class="comments-title">
 
 			<?php
-				printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'cubes' ),
-				number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
+				printf( esc_html( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'cubes' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ) );
 			?>
 			
 		</h2>
@@ -47,7 +46,7 @@ if ( post_password_required() ) {
 		?>       
 		<nav class="navigation comment-navigation" role="navigation">
 			
-			<h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'cubes' ); ?></h1>
+			<h1 class="screen-reader-text section-heading"><?php esc_html_e( 'Comment navigation', 'cubes' ); ?></h1>
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'cubes' ) ); ?></div>
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'cubes' ) ); ?></div>
 		
@@ -56,7 +55,7 @@ if ( post_password_required() ) {
 		<?php endif; // Check for comment navigation ?>
 		 
 		<?php if ( ! comments_open() && get_comments_number() ) : ?>
-			<p class="no-comments"><?php _e( 'Comments are closed.' , 'cubes' ); ?></p>
+			<p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'cubes' ); ?></p>
 		<?php endif; ?>
 	<?php endif; // have_comments() ?>
 	

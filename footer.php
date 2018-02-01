@@ -5,7 +5,7 @@
  *
  * @Package: cubes
  * @Author: Kshithij Iyer
- * @Version: 1.0
+ * @Version: 1.0.1
  */
 
 ?>
@@ -15,7 +15,7 @@
 		
 		<!-- Message to be displayed in the footer -->
 		
-		<p>Powered by cubes. Develeoped by Kshithij Iyer. &copy; <?php echo date( 'Y' );?></p>
+		<p>Powered by cubes. Develeoped by Kshithij Iyer. &copy; <?php echo esc_html( date( 'Y' ) );?></p>
 	
 	</footer><!-- footer -->
 	

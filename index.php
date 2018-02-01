@@ -5,7 +5,7 @@
  *
  * @Package: cubes
  * @Author: Kshithij Iyer
- * @Version: 1.0
+ * @Version: 1.0.1
  */
 get_header();?>
 	
@@ -34,7 +34,7 @@ get_header();?>
 
 				}?>
 							<!-- Post -->
-							<div class='col-sm-4' style='background-color:<?php echo $colors[ $color_index ];?>;'>
+							<div class='col-sm-4' style='background-color:<?php echo esc_attr( $colors[ $color_index ] );?>;'>
 								
 								<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 									
@@ -68,6 +68,6 @@ get_header();?>
 		} // End if().
 
 		#Pagination for the page.
-		echo paginate_links();
+		echo esc_html( paginate_links() );
 
 		get_footer();?>
